@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Metadata -->
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+			<meta name="description" content="Aiuto Website" />
+			<meta name="author" content="AiutoTeam" />
+			<!-- CSS -->
+				<!-- Bootstrap - Material Design -->
+					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+					<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css" integrity="sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I" crossorigin="anonymous">
+				<!-- Custom Styles -->
+					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:600&amp;subset=latin-ext">
+					<link rel="stylesheet" href="./assets/css/style.css">
+		<!-- JavaScript -->
+			<!-- At the end of the document to imporve load times -->
+		<!-- Other Stuff -->
+			<link rel="icon" href="./assets/img/icon/icon.png" />
+			<title>Signin | Aiuto</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-primary fixed-top">
+					<a class="navbar-brand" href="./">
+						&nbsp;&nbsp;<img src="./assets/img/svg/logo/logo.svg" class="img-nav" alt="Aiuto">&nbsp;&nbsp;
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">
+									Home <span class="sr-only">(current)</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./signup">
+									Sign Up
+								</a>
+							</li>
+						</ul>
+						<ul class="nav-item mr-left">
+							<button name="button" id="btnSignOut" class="btn btn-info btn-sm pull-right nav-text" onclick="signOut()">Sign out</button>
+						</ul>
+					</div>
+			</nav>
+		<!-- Bootstrap Jumbotron -->
+			<section class="jumbotron text-center">
+				<div class="container">
+					<h1 class="jumbotron-heading">Aiuto</h1>
+					<p class="lead text-muted">Connect with others to make a real difference.</p>
+				</div>
+			</section>
+		<!-- Form -->
+			<div class="container">
+				<br /><br />
+				<div class="form">
+					<div class="form-heading">
+						<h2 class="form-heading">Sign in</h2>
+					</div>
+					<div class="form-group">
+						<label for="signInEmail" class="sr-only">Email address</label>
+						<input type="email" id="signInEmail" class="form-control" placeholder="Email address" required autofocus />
+					</div>
+					<div class="form-group">
+						<label for="signInPassword" class="sr-only">Password</label>
+						<input type="password" id="signInPassword" class="form-control" placeholder="Password" required />
+					</div>
+					<div class="form-group">
+						<button name="button" id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit" onclick="signIn()">Sign in</button>
+						<!--<button name="button" id="getLocation" class="btn btn-lg btn-primary btn-block" type="submit" onclick="getLocation()">Get location</button> -->
+					</div>
+					<div class="form-group">
+						<a href="./signup" align="center">Don't have an account? Sign up.</a>
+					</div>
+				</div>
+			</div>
+		<!-- Footer -->
+			<footer>
+				<div class="container-fluid">
+					<div class="row justify-content-center">
+						<div class="col-4">
+							<div class="row justify-content-center">
+								<div class="col-4">
+									<p align="right">
+										<!--<a href="https://www.facebook.com/" class="fb"><span class="fa fa-facebook fa-lg"></span></a>-->
+									</p>
+								</div>
+								<div class="col-4">
+									<p align="center">
+										<!--<a href="https://twitter.com/" class="tweet"><span class="fa fa-twitter fa-lg"></span></a>-->
+									</p>
+								</div>
+								<div class="col-4">
+									<p align="left">
+										<!--<a href="https://plus.google.com/" class="gplus"><span class="fa fa-google-plus fa-lg"></span></a>-->
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-4">
+							<div>
+								<p align="center">
+									Made with <span class="fa fa-heart fa-lg"></span>, <span class="fa fa-code fa-lg"></span> &amp; <span class="fa fa-coffee fa-lg"></span>.
+								</p>
+							</div>
+						</div>
+						<div class="col-4">
+							<p>
+								<a href="https://www.google.co.in/maps/place/Hyderabad,+Telangana/@17.4121531,78.1278513,10z/data=!3m1!4b1!4m5!3m4!1s0x3bcb99daeaebd2c7:0xae93b78392bafbc2!8m2!3d17.385044!4d78.486671">
+									Hyderabad, Telangana, India
+								</a>
+							</p>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-4">
+							<p align="center">
+								<span class="fa fa-envelope fa-lg"></span> - <a href="jayusaik@gmail.com">jayusaik@gmail.com</a>
+							</p>
+						</div>
+						<div class="col-4">
+							<p align="center">
+								Currently hosted on <a href="https://github.com/TeamAiuto/TeamAiuto.github.io"><img src="./assets/img/svg/github/github.svg" alt="GitHub" width="75" /></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- JavaScript -->
+				<!-- Firebase -->
+					<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+					<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+					<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+					<!-- Stuff that will be required later
+					<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-messaging.js"></script>
+					-->
+					<script src="https://cdn.firebase.com/libs/geofire/4.1.2/geofire.min.js"></script>
+				<!-- JQuery -->
+					<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+				<!-- Popper.js -->
+					<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+				<!-- Bootstrap - Material Design -->
+					<script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
+				<!-- Font Awesome -->
+					<script src="https://use.fontawesome.com/a5357c62d4.js"></script>
+				<!-- Custom Scripts -->
+					<script src="./assets/js/script.js"></script>
+			</body>
+		</html>

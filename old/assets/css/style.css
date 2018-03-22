@@ -1,0 +1,63 @@
+/* Generic */
+
+body {
+	padding-top: 4.5rem;
+	font-family: "Dosis", "Roboto", sans-serif;
+	/*color: #27B14B;*/
+}
+
+.navbar {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.jumbotron {
+	background-image: url("../img/bg/bg.gif");
+	/*background-size: cover;*/
+}
+
+.img-nav {
+	height: 1.25rem;
+}
+
+/* Social Buttons */
+
+.fb {
+	color: #3b5998;
+}
+
+.tweet {
+	color: #00aced;
+}
+
+.gplus {
+	color: #d34836;
+}
+
+/* Forms */
+
+.form {
+	max-width: 35%;
+	padding: 1rem;
+	margin: 0 auto;
+}
+
+.form.form-heading, .form.checkbox {
+	margin-bottom: 1rem;
+}
+
+.form.checkbox {
+	font-weight: normal;
+}
+
+.form.form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0.5rem;
+}
+
+.form.form-control:focus {
+	z-index: 2;
+}
